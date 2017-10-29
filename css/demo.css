@@ -1,0 +1,63 @@
+.list-student {
+  width: 600px;
+  position: relative;
+  list-style: none;
+  display: inline-block; }
+  .list-student .items {
+    position: relative;
+    float: left;
+    max-width: 270px;
+    text-align: center;
+    min-height: 270px;
+    display: table;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 15px; }
+    .list-student .items:nth-child(3n) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: 0px;
+      margin-left: 20px;
+      z-index: 2;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .list-student .items:after {
+      width: 70%;
+      height: 70%;
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      z-index: 1; }
+    .list-student .items:hover:after {
+      background: #ccc; }
+  .list-student .content-item {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2; }
+  .list-student img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+  .list-student span {
+    display: inline-block;
+    width: 270px; }
+    .list-student span.name {
+      font-weight: 700;
+      margin-top: 15px; }
+    .list-student span.job {
+      font-size: 12px; }
+    .list-student span.mark {
+      color: gray;
+      font-size: 12px; }
+
+/*# sourceMappingURL=demo.css.map */

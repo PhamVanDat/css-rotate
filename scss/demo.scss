@@ -1,0 +1,83 @@
+.list-student{
+    width: 600px;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    .items{
+        position: relative;
+        float: left;
+        max-width: 270px;
+        text-align: center;
+        min-height: 270px;
+        display:table;
+        -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+        margin:15px;
+
+        &:nth-child(3n){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top:0px;
+            margin-left: 20px;
+            z-index: 2;
+            -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+        }
+        &:after{
+            width: 70%;
+            height: 70%;
+            content:"";
+            display: inline-block;
+            position: absolute;
+            top:15%;
+            left:15%;
+            border: 1px solid rgba(#000, .4);
+            -webkit-transform:rotate(45deg);
+                -ms-transform:rotate(45deg);
+                    transform:rotate(45deg);
+            z-index: 1;
+        }
+
+        &:hover{
+            &:after{
+                background: #ccc;
+            }
+        }
+
+    }
+    .content-item{
+        display: table-cell;
+        vertical-align: middle;
+        position:relative;
+        z-index: 2;
+    }
+    img{
+        border-radius: 50%;
+        width:90px;
+        height:90px;
+        border:1px solid rgba(#000,.1);
+    }
+
+    span{
+        display: inline-block;
+        width: 270px;
+
+        &.name{
+            font-weight: 700;
+            margin-top:15px;
+        }
+
+        &.job{
+            font-size: 12px;
+        }
+
+        &.mark{
+            color: gray;
+            font-size: 12px;
+        }
+
+    }
+    
+}
